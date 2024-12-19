@@ -1,0 +1,20 @@
+name: "test workflow"
+
+on:
+  pull_request:
+    paths:
+        - '**'
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out
+      uses: actions/checkout@master
+
+    - name: list files
+      run: ls
